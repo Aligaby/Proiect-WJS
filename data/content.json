@@ -1,0 +1,15 @@
+{
+    "categorie": "pompe",
+    "produse": [
+        {
+            "id": 1,
+            "titlu": "Pompa V-i120SV",
+            "descriere": "Pompa de vid V-i120SV este produsa de Value"
+        },
+        {
+            "id": 2,
+            "titlu": "Pompa VH115",
+            "descriere": "Pompa de vid VH115 este produsa de Value"
+        }
+    ]
+}

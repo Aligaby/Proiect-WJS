@@ -1,0 +1,90 @@
+#header__connections {
+    position: relative;
+    display: block;
+    max-height: 55px;
+    padding: 0 20px;
+    background-color: $color-secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #logo__h1 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        #hamburger { // hamburger menu
+            content: "menu";
+            display: inline-block;
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-size: 36px;
+            color: #B5C3D5;
+            cursor: pointer;
+
+            @media only screen and (min-width: 1450px) {
+                display: none;
+            }
+        }
+
+        #logo__a {
+            text-decoration: none;
+
+            #logo__img {
+                border: 0px;
+                max-height: 55px;
+                vertical-align: middle;
+            }
+        }      
+    }
+
+    #nav-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: #B5C3D5;
+            position: relative;
+            white-space: nowrap;
+
+            span.respoVizibile {
+                display: none;
+
+                @media only screen and (min-width: 560px) {
+                    display: inline-block;
+                }
+            }
+
+            @mixin linkBeforeSign {
+                display: inline-block;
+                font-family: "Material Icons";
+                font-style: normal;
+                font-size: 24px;
+                vertical-align: middle;
+                padding: 0 7px;
+                
+            }
+
+            &#yourCart::before {
+                content: "shopping_cart";
+                @include linkBeforeSign;
+            }
+
+            &#register::before {
+                content: "account_circle";
+                @include linkBeforeSign;
+            }
+
+            &#login::before {
+                content: "login";
+                @include linkBeforeSign;
+            }
+        }  
+    }
+}

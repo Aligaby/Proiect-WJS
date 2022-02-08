@@ -1,0 +1,43 @@
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+
+        &-searchBar {
+            max-width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid $color-light-gray;
+            border-radius: 7px 0 0 7px;
+
+            @media only screen and (min-width: 570px) {
+                min-width: 500px;
+            }
+        }
+
+        &-submitSearch {
+            padding: 6px 30px;
+            font-size: 16px;
+            color: $color-white;
+            border: 1px solid $color-calltoaction;
+            border-radius: 0 7px 7px 0;
+            background-color: $color-calltoaction;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+}
+
+.searcBarOnOtherPages {
+    padding: 20px 0;
+    background-color: #F6F9FB;
+}

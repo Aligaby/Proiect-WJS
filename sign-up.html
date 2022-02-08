@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+    <title>Document</title>
+</head>
+<body>
+    <main id="mainSign">
+        <div id="containerSign">
+            <section id="left">
+                <h2>HVACR tools</h2>
+                <p>High performance tools for wide application in refrigeration</p>
+                <button id="left__button">
+                    <a href="index.html" id="left__button--forSellers">FOR SELLERS</a>
+                </button>
+            </section>
+            <section id="right">
+                <img src="image/sign-up.webp" alt="sign up" id="img-signInUp" />
+                <h1 id="h1-signInUp">Sign Up Below!</h1>
+                <form id="signup-form" action="" method="get">
+                    <fieldset>
+                        <div class="fields">
+                            <label for="firstName" class="fields__label">First Name</label>
+                            <input type="text" name="firstName" id="firstName" class="fields__input" placeholder="First Name" >
+                            <p class="underInput"></p>
+                        </div>
+                        <div class="fields">
+                            <label for="lastName" class="fields__label">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" class="fields__input" placeholder="Last Name" >
+                            <p class="underInput"></p>
+                        </div>
+                        <div class="fields">
+                            <label for="emailAddress" class="fields__label">Email Address</label>
+                            <input type="text" name="emailAddress" id="emailAddress" class="fields__input" placeholder="Email Address" >
+                            <p class="underInput"></p>
+                        </div>
+                        <div class="fields">
+                            <label for="password" class="fields__label">Password</label>
+                            <input type="password" name="password" id="password" class="fields__input" >
+                            <p class="underInput"></p>
+                        </div>
+                        <div class="fields">
+                            <label for="city" class="fields__label">City</label>
+                            <input type="text" name="city" id="city" class="fields__input" placeholder="City" >
+                            <p class="underInput"></p>
+                        </div>
+                        <div class="fields">
+                            <label for="country" class="fields__label">Country</label>
+                            <input type="text" name="country" id="country" class="fields__input" placeholder="Select City First"  readonly>
+                            <p class="underInput"></p>
+                        </div>
+                    </fieldset>
+                    <input type="submit" id="submitInUp" value="Sign Up" disabled>
+                    <p id="signIn">
+                        <a href="sign-in.html">Already have an account? Sign in!</a>
+                    </p>
+                </form>
+            </section>
+        </div> 
+    </main>
+    <script src="scripts/sign-up.js"></script>
+</body>
+</html>

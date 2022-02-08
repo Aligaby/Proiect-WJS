@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $color-primary;
+    position: relative;
+}

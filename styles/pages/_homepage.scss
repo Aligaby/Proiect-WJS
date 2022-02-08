@@ -1,0 +1,43 @@
+body {
+    text-align: center; 
+}
+
+.close { // pentru hamburger menu
+    display: none;
+}
+
+#pageContent {
+    margin: 0 auto;
+    
+    @media only screen and (min-width: 1450px) {
+        max-width: 1450px;
+    }
+}
+
+.homepageHero {
+    background-image: url(../image/hero-image.webp);
+    background-blend-mode:luminosity;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 592px;
+
+    &__div {
+        max-width: 650px;
+        line-height: 1.5;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+
+        &-h1 {
+            color: $color-third;
+            font-size: 36px;
+            font-weight: lighter;
+        }
+
+        &-p {
+            color: $color-secondary;
+            font-size: 22px;
+            font-weight: lighter;
+        }
+    }
+}

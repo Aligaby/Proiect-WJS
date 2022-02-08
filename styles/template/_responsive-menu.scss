@@ -1,0 +1,115 @@
+/* header categories line */
+#responsive__nav {
+    background-color: $color-white;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    // z-index: 100;
+    min-width: 275px;
+    // transition: 0.5 transform linear;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+
+    @media only screen and (min-width: 1450px) {
+        display: block;
+        background-color: $color-white;
+        position: relative;
+        top: 0px;
+        box-shadow: none;
+    }
+
+    #responsive__menu {
+        list-style: none;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: left;      
+        gap: 0px;
+        position: relative;
+        
+        @media only screen and (min-width: 1450px) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 0px;
+        }
+        
+        & li {            
+            padding: 0 10px;
+            position: relative;
+            
+            
+            @media only screen and (min-width: 1450px) {
+                display: inline-block;
+                padding: 10px 50px;
+                border: 0px;
+            }
+
+            & .dropdown {
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+
+                @media only screen and (min-width: 1450px) {
+                    position: absolute;
+                    top: 48px;
+                    left: 0px;
+                    width: 250px;
+                    border-top: 3px solid $color-calltoaction;
+                }
+            }
+
+            &:hover {
+                background-color: $color-third;
+
+                & .dropdown {
+                    display: flex;
+                    flex-direction: column;
+                    visibility: visible;
+                    opacity: 1;
+                    margin: 0px -10px;
+                    background-color: $color-white;
+
+                    @media only screen and (min-width: 1450px) {
+                        margin: 0px;
+                    }
+
+                    & li {
+                        text-indent: 10px;
+
+                        &:hover {
+                            background-color: $color-primary;
+                            border-left: 3px solid $color-calltoaction;
+                            text-indent: 7px;
+                        }
+                    }
+                }
+            }
+
+            & a {
+                text-decoration: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                font-size: 16px;
+                color: $color-secondary;
+                padding: 5px 0;
+
+                &::after {
+                    content: "navigate_next";
+                    font-family: "Material Icons";
+                    font-style: normal;
+                    font-size: 16px;
+                    vertical-align: middle;
+
+                    @media only screen and (min-width: 1450px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

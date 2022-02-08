@@ -1,0 +1,51 @@
+#productMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+    gap: 20px;
+    background-color: $color-white;
+    text-align: left;
+    padding: 20px;
+}
+
+#breadcrumbs {
+    margin: 10px 0px;
+}
+
+#productTop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    @media only screen and (min-width: 650px) {
+        flex-wrap: nowrap;
+    }
+
+    @mixin imageBuyInfo {
+        border: 1px solid #000;
+        padding: 10px;
+        background-color: red;
+    }
+    
+    &__image {
+        @include imageBuyInfo;
+
+        @media only screen and (min-width: 650px) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__buyInfo {
+        @include imageBuyInfo;
+        
+        @media only screen and (min-width: 650px) {
+            flex: 1 1.1 auto;
+        }
+    }
+}
+
+#productImage {
+    margin-bottom: 10px;
+}
