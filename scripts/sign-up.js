@@ -70,6 +70,12 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 		return showError(input, invalidMsg);
 	}
 
+    // verific daca email a mai fost utilizat
+    const emailInLocalMemory = JSON.parse(localStorage.getItem(email));
+    if (emailInLocalMemory) {
+		return showError(input, 'This email is used');
+	}
+
 	return true;
 }
 
