@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
+    <title>Pagina de login</title>
+    <meta name="description" content="Ai deja cont? Introdu emailul si parola si poti face achizitii.">
+    <script type="text/javascript" src="./scripts/sign-in.js" defer></script>
 </head>
 <body>
     <main id="mainSign">
@@ -16,13 +18,13 @@
                 <h2>HVACR tools</h2>
                 <p>High performance tools for wide application in refrigeration</p>
                 <button id="left-signin__button">
-                    <a href="index.html" id="left-signin__button--forSellers">FOR SELLERS</a>
+                    <a href="./index.html" id="left-signin__button--forSellers">FOR SELLERS</a>
                 </button>
             </section>
             <section id="right-signin">
-                <img src="image/sign-up.webp" alt="sign up" id="img-signInUp" />
+                <img src="./image/sign-up.webp" alt="sign up" id="img-signInUp" />
                 <h1 id="h1-signInUp">Sign In Below!</h1>
-                <form id="signIn-form" action="index.html" method="get">
+                <form id="signIn-form" action="./index.html" method="get">
                     <fieldset>
                         <div class="fields">
                             <label for="emailAddress" class="fields__label">Email Address</label>
@@ -38,12 +40,11 @@
                     <p id="aboveSignIn"></p>
                     <input type="submit" value="Sign In" id="submitInUp" disabled>
                     <p id="signIn">
-                        <a href="sign-up.html">Don't have an account? Sign up here!</a>
+                        <a href="./sign-up.html">Don't have an account? Sign up here!</a>
                     </p>
                 </form>
             </section>
         </div> 
     </main>
-    <script src="scripts/sign-in.js"></script>
 </body>
 </html>

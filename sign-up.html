@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
     <title>Document</title>
+    <script type="text/javascript" src="./scripts/sign-up.js" defer></script>
 </head>
 <body>
     <main id="mainSign">
@@ -16,13 +17,13 @@
                 <h2>HVACR tools</h2>
                 <p>High performance tools for wide application in refrigeration</p>
                 <button id="left__button">
-                    <a href="index.html" id="left__button--forSellers">FOR SELLERS</a>
+                    <a href="./index.html" id="left__button--forSellers">FOR SELLERS</a>
                 </button>
             </section>
             <section id="right">
-                <img src="image/sign-up.webp" alt="sign up" id="img-signInUp" />
+                <img src="./image/sign-up.webp" alt="sign up" id="img-signInUp" />
                 <h1 id="h1-signInUp">Sign Up Below!</h1>
-                <form id="signup-form" action="" method="get">
+                <form id="signup-form" action="./sign-in.html" method="get">
                     <fieldset>
                         <div class="fields">
                             <label for="firstName" class="fields__label">First Name</label>
@@ -57,12 +58,11 @@
                     </fieldset>
                     <input type="submit" id="submitInUp" value="Sign Up" disabled>
                     <p id="signIn">
-                        <a href="sign-in.html">Already have an account? Sign in!</a>
+                        <a href="./sign-in.html">Already have an account? Sign in!</a>
                     </p>
                 </form>
             </section>
         </div> 
     </main>
-    <script src="scripts/sign-up.js"></script>
 </body>
 </html>

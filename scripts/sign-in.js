@@ -15,13 +15,15 @@ formIn.addEventListener('submit', (eventSubmit) => {
 
     const userInStorage = JSON.parse(localStorage.getItem(email.value));
     const loggedUser = JSON.parse(sessionStorage.getItem('userLogat'));
-    if (userInStorage !== null && userInStorage.userPassword === pass.value) {
+
+    if (userInStorage === null || email.value !== userInStorage.userEmail) {
+        errorAboveSignIn.innerText = `You must first create an account`;
+    } else if (email.value === userInStorage.userEmail && pass.value !== userInStorage.userPassword) {
+        errorAboveSignIn.innerText = `Email or password is invalid`;
+    } else if (email.value === userInStorage.userEmail && pass.value === userInStorage.userPassword && loggedUser === null) {
         sessionStorage.setItem('userLogat', JSON.stringify(userInStorage));
         location.href = 'index.html';
-    } else if (loggedUser.userFirstName !== 'undefined') {
-        // nu permite altui email sa se logheze daca deja este unul logat in sessionStorage
-        errorAboveSignIn.innerText = `You are logged in as ${loggedUser.userFirstName}`;
-    } else {
-        errorAboveSignIn.innerText = 'Email or password is invalid';
-    }
+    } else if (email.value === userInStorage.userEmail && pass.value === userInStorage.userPassword && loggedUser !== null) { 
+        errorAboveSignIn.innerText = `${loggedUser.userFirstName} ${loggedUser.userLastName} you are already connected`;
+    }    
 })
