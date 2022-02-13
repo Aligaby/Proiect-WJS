@@ -1,15 +1,31 @@
 {
-    "categorie": "pompe",
     "produse": [
         {
             "id": 1,
-            "titlu": "Pompa V-i120SV",
-            "descriere": "Pompa de vid V-i120SV este produsa de Value"
+            "categorie": "pompe",
+            "produs": "vi120sv",
+            "titlu": "Pompa de vacuum Vi120sv",
+            "descriere": "Pompa vacuum Vi120sv este un produs marca Value. Cu un debit de 0,85 l/s si presiune de vacuum pana in 15 microni, aceasta pompa de vid se recomanda a se utiliza atat in echipamente frigorifice mici cat si in instalatii frigorifice mari (chilere, depozite frigorifice etc)",
+            "producator": "Value",
+            "imagine": ["./image/categorii/pompe/vi120sv/vi120sv.jpg"]
         },
         {
             "id": 2,
-            "titlu": "Pompa VH115",
-            "descriere": "Pompa de vid VH115 este produsa de Value"
+            "categorie": "pompe",
+            "produs": "vh115",
+            "titlu": "Pompa de vacuum VH115",
+            "descriere": "Pompa vid VH115 este un produs marca Value de dimensiuni si greutate reduse. Cu un debit de 0,7 l/s si adancime vacuum pana la 150 microni, aceasta pompa de vid se recomanda a se utiliza la frigidere casnice, aparate de aer conditionat casnic, aer conditionat auto, vitrine frigorifice comerciale de dimensiune mica.",
+            "producator": "Value",
+            "imagine": ["./image/categorii/pompe/vh115/vh115.jpg"]
+        },
+        {
+            "id": 3,
+            "categorie": "pompe",
+            "produs": "ve125",
+            "titlu": "Pompa VE125",
+            "descriere": "Pompa de vacuum VE125 Value are un debit de 70 litri/min si o adancime de vacuum de 150 microni coloana Hg (200 mbar). Alimentata la tensiunea de 230 V dezvolta o putere de 1/4 CP. Producatorul Value recomanda aceasta pompa de vid pentru operatii de instalare si service a echipamentelor de aer conditionat, camerelor frigorifice si vitrinelor frigorifice.",
+            "producator": "Value",
+            "imagine": ["./image/categorii/pompe/ve125/ve125.jpg"]
         }
     ]
 }
