@@ -1,0 +1,33 @@
+#breadcrumbs {
+    margin: 10px 0px;
+    padding: 0 50px;
+    font-size: 12px;
+
+    &__ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+
+        &-home {
+            
+            a {
+                color: $color-dark-gray;
+
+                & span {
+                    font-size: 18px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &-category {
+            text-transform: capitalize;
+            
+            a {
+                color: $color-dark-gray;
+            }
+        }
+    }
+}

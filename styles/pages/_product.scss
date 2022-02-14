@@ -3,49 +3,108 @@
     flex-direction: column;
     justify-content: space-between;
     // align-items: center;
-    gap: 20px;
+    gap: 50px;
     background-color: $color-white;
     text-align: left;
-    padding: 20px;
-}
+    padding: 0 20px;
 
-#breadcrumbs {
-    margin: 10px 0px;
+    @media only screen and (min-width: 1000px) {
+        padding: 0 50px;
+    }
 }
 
 #productTop {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
     
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: 1000px) {
+        padding: 0 50px;
+        gap: 100px;
         flex-wrap: nowrap;
-    }
-
-    @mixin imageBuyInfo {
-        border: 1px solid #000;
-        padding: 10px;
-        background-color: red;
     }
     
     &__image {
-        @include imageBuyInfo;
+        text-align: center;
+        border: 1px solid $color-light-gray;
+        box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.3), 0px 3px 3px rgba(0, 0, 0, 0.3);;
 
-        @media only screen and (min-width: 650px) {
-            flex: 1 1 auto;
+        @media only screen and (min-width: 1000px) {
+            flex: 1;
         }
     }
 
     &__buyInfo {
-        @include imageBuyInfo;
+        padding: 10px;
+        text-align: left;
+        // border: 1px solid red;
         
-        @media only screen and (min-width: 650px) {
-            flex: 1 1.1 auto;
+        @media only screen and (min-width: 1000px) {
+            flex: 1;
+        }
+
+        &-h1 {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        &-manufacturer {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        &-productCode {
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        &-price {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            color: $color-dark-gray;
+        }
+
+        &-availability {
+            margin-bottom: 10px;
+            line-height: 1.3;
+
+            .inStoc-verde {
+                font-size: 14px;
+                font-weight: 600;
+                padding: 10px;
+                background-color: $color-calltoaction;
+                color: $color-white;
+            }
+
+            .inStoc-orange {
+                background-color: #FFA500;
+            }
         }
     }
 }
 
-#productImage {
-    margin-bottom: 10px;
+#productImage__img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
 }
+
+#productContent {
+    padding: 0 0 50px;
+
+    @media only screen and (min-width: 1000px) {
+        padding: 0 50px 50px;
+    }
+    
+    &__h2 {
+        margin-bottom: 10px;
+    }
+}
+

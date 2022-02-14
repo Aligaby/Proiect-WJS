@@ -10,7 +10,7 @@ const submitButton = document.getElementById('submitInUp');
 
 const inputRequired = 'Please fill in this field';
 const passRequired = 'Please enter your password';
-const passInvalid = 'Your password must be at least 8 characters long, one number, one uppercase, one special character ';
+const passInvalid = 'Your password must be at least 8 characters long, a number, a uppercase, a special character ';
 const emailRequired = 'Please enter your email';
 const emailInvalid = 'Please enter a correct email address format';
 
