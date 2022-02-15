@@ -9,8 +9,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
     <title></title>
     <meta name="description" content="">
-    <script type="text/javascript" src="scripts/responsive-menu.js" defer></script>
+    <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
+    <script type="text/javascript" src="./scripts/categorie.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -100,7 +101,32 @@
             </form>
         </section>
 
-        <main id="categoryMain"></main>
+
+        <!-- START Main-->
+        <main id="categoryMain">
+            <div id="breadcrumbs">
+                <ul id="breadcrumbs__ul">
+                    <li id="breadcrumbs__ul-home">
+                        <a href="./index.html">
+                            <span class="material-icons">home</span>
+                        </a>
+                    </li>
+                    <li>></li>
+                    <li id="breadcrumbs__ul-category"></li>
+                </ul>
+            </div>
+            <div id="categoryArea">
+                <!-- SEARCH -->
+                <aside id="categoryFilter">
+                    <p>ceva de test</p>
+                </aside>
+                <!-- PRODUSE -->
+                <section id="productsCategory"></section>
+            </div>
+        </main>
+        <!-- END Main-->
+
+
 
         <footer id="footer">
             <section id="footerApp">

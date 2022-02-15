@@ -1,0 +1,65 @@
+#categoryMain {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 0 20px 20px;
+
+    @media only screen and (min-width: 1000px) {
+        padding: 0 50px 50px;
+    }
+}
+
+#categoryArea {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-auto-flow: columns;
+    grid-auto-rows: 1fr;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px;
+
+    #categoryFilter {
+        border: 1px solid red;
+    }
+
+    #productsCategory {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.card {
+    border: 1px solid $color-light-gray;
+    min-height: 350px;
+    padding: 5px;
+
+    &__img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    &__title {
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__price {
+        padding: 10px 5px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__button {
+        border: 0px;
+        padding: 5px 20px;
+        color: $color-white;
+        background-color: $color-calltoaction;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
