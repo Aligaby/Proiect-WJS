@@ -10,22 +10,12 @@
 }
 
 #categoryArea {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-auto-flow: columns;
-    grid-auto-rows: 1fr;
-    // flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0px;
-
-    #categoryFilter {
-        border: 1px solid red;
-    }
+    padding: 0 50px;
 
     #productsCategory {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        justify-items: center;
+        justify-content: center;
         align-items: center;
         gap: 10px;
     }
@@ -34,7 +24,7 @@
 .card {
     border: 1px solid $color-light-gray;
     min-height: 350px;
-    padding: 5px;
+    padding: 15px;
 
     &__img {
         width: 100%;

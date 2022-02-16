@@ -12,6 +12,7 @@
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
     <script type="text/javascript" src="./scripts/categorie.js" defer></script>
+    <script type="text/javascript" src="./scripts/search.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -93,8 +94,8 @@
             </nav>
         </header>
         <section id="hero" class="searcBarOnOtherPages">
-            <form action="" id="hero__form">
-                <input type="search" name="Search on site" id="hero__form-searchBar" placeholder="Search ...">
+            <form action="./search.html" method="get" id="hero__form">
+                <input type="search" id="hero__form-searchBar" placeholder="Search ...">
                 <button type="submit" id="hero__form-submitSearch">
                     <span class="material-icons">search</span>
                 </button>
@@ -117,9 +118,9 @@
             </div>
             <div id="categoryArea">
                 <!-- SEARCH -->
-                <aside id="categoryFilter">
+                <!-- <aside id="categoryFilter">
                     <p>ceva de test</p>
-                </aside>
+                </aside> -->
                 <!-- PRODUSE -->
                 <section id="productsCategory"></section>
             </div>

@@ -10,7 +10,6 @@
     <title></title>
     <meta name="description" content="">
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
-    <script type="text/javascript" src="./scripts/produs.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
     <script type="text/javascript" src="./scripts/search.js" defer></script>
 </head>
@@ -24,6 +23,7 @@
                         <img src="./image/logo.webp" alt="Tools" id="logo__img">
                     </a>
                 </h1>
+                <span id="lungime" style="color: #FFF;"></span>
                 <div id="nav-right">
                     <a href="#" id="yourCart">
                         <span class="respoVizibile">Your Cart</span>
@@ -92,6 +92,8 @@
                 </ul>
             </nav>
         </header>
+        
+        <!-- START Search -->
         <section id="hero" class="searcBarOnOtherPages">
             <form action="./search.html" method="get" id="hero__form">
                 <input type="search" id="hero__form-searchBar" placeholder="Search ...">
@@ -100,49 +102,16 @@
                 </button>
             </form>
         </section>
-        <main id="productMain">
-            <div id="breadcrumbs">
-                <ul id="breadcrumbs__ul">
-                    <li id="breadcrumbs__ul-home">
-                        <a href="./index.html">
-                            <span class="material-icons">home</span>
-                        </a>
-                    </li>
-                    <li>></li>
-                    <li id="breadcrumbs__ul-category">
-                        <a href=""></a>
-                    </li>
-                    <li>></li>
-                    <li id="breadcrumbs__ul-product"></li>
-                </ul>
-            </div>
-            <section id="productTop">
-                <div id="productTop__image">
-                    <section id="productImage">
-                        <img src="" alt="Pompa de vid" id="productImage__img">
-                        <ul id="productCarusel"></ul>
-                    </section>
-                </div>
-                <aside id="productTop__buyInfo">
-                    <h1 id="productTop__buyInfo-h1"></h1>
-                    <p id="productTop__buyInfo-manufacturer"></p>
-                    <p id="productTop__buyInfo-productCode"></p>
-                    <p id="productTop__buyInfo-price"></p>
-                    <p id="productTop__buyInfo-availability">
-                        <span class="inStoc-verde"></span>
-                    </p>
-                    <form action="cart.html" method="get" id="formQuantity">
-                        <label for="formQuantity__number">Alege cantitatea</label>
-                        <input type="number" name="productQuantity" id="formQuantity__number">
-                        <input type="submit" value="Adauga in Cos" id="formQuantity__submit">
-                    </form>
-                </aside>
-            </section>
-            <article id="productContent">
-                <h2 id="productContent__h2">Detalii produs</h2>
-                <p class="productContent__description"></p>
-            </article>
+        <!-- END Search -->
+
+        <!-- START Main-->
+        <main id="searchMain">
+            <h3 id="mesajSearch"></h3>
+            <section id="valueSearch"></section>
         </main>
+        <!-- END Main-->
+
+        <!-- START Footer -->
         <footer id="footer">
             <section id="footerApp">
                 <h3 id="footerApp__h3">Try our mobile app</h3>

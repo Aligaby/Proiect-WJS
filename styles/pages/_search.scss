@@ -1,0 +1,23 @@
+#searchMain {
+    background-color: $color-white;
+    padding: 20px;
+
+    @media only screen and (min-width: 1000px) {
+        padding: 20px 50px 50px;
+    }
+}
+
+#mesajSearch {
+    padding: 10px;
+    color: $color-primary;
+    background-color: $color-secondary;
+}
+
+#valueSearch {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 50px 0;
+}

@@ -11,6 +11,7 @@
     <meta name="description" content="Scule pentru instalarea si service-ul echipamentelor de refrigerare, congelare si aer conitionat">
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
+    <script type="text/javascript" src="./scripts/search.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -95,12 +96,14 @@
                 <h1 id="hero__div-h1" class="homepageHero__div-h1">Climatul perfect pentru<br />un zambet perfect</h1>
                 <p id="hero__div-p" class="homepageHero__div-p">Sistemele noastre de aer conditionat ofera performante superioare, eficienta energetica si confort, in conformitate cu toate spatiile interioare si stilurile de viata.</p>
             </div>
-            <form action="" id="hero__form">
-                <input type="search" name="Search on site" id="hero__form-searchBar" placeholder="Search ...">
+            <!-- START Search -->
+            <form action="./search.html" method="get" id="hero__form">
+                <input type="search" id="hero__form-searchBar" placeholder="Search ...">
                 <button type="submit" id="hero__form-submitSearch">
                     <span class="material-icons">search</span>
                 </button>
             </form>
+            <!-- END Search -->
         </section>
 
         <main id="homepageMain"></main>

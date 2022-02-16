@@ -15,11 +15,10 @@ body {
 }
 
 .homepageHero {
-    background-image: url(../image/hero-image.webp);
+    background-image: url(./../image/hero-image.webp);
     background-blend-mode:luminosity;
-    background-size: cover;
     background-repeat: no-repeat;
-    max-width: 100%;
+    background-size: cover;
     height: 592px;
 
     &__div {
@@ -27,6 +26,11 @@ body {
         line-height: 1.5;
         background-color: rgba(255, 255, 255, 0.3);
         padding: 20px;
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
 
         &-h1 {
             color: $color-third;

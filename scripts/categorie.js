@@ -38,7 +38,7 @@ function dateProdus(produse) {
     // creez fiecare produs
     const productsCategory = document.getElementById('productsCategory');  
     produse.forEach(elem => {
-        productsCategory.appendChild(createCards(elem));    
+        productsCategory.appendChild(createCards(elem));
     });
 } 
 
