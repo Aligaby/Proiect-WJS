@@ -1,8 +1,16 @@
-import { endpointUrl } from './global.js';
-// const endpointUrl = './data/content.json';
-const productMain = document.getElementById('productMain');
+import { endpointUrl } from './global.js'; // calea spre JSON
+
+// selectie valoare id produs din URL
 const idProdus = Number(location.href.split('id=')[1]);
 
+// preluare date din JSON
+fetch(endpointUrl).then((data) => data.json()).then(date => {
+    const produse = date.produse;
+    dateProdus(produse[idProdus-1]);
+    cartProdus(produse[idProdus-1])
+})
+
+// datele din JSON sunt incarcate in DOM
 function dateProdus(produs) {
     const {id, categorie, titlu, descriere, pret, producator, codprodus, imagine, disponibilitate} = produs;
 
@@ -42,7 +50,61 @@ function dateProdus(produs) {
     descriereJson.innerText = `${descriere}`;
 } 
 
-fetch(endpointUrl).then((data) => data.json()).then(date => {
-    const produse = date.produse;
-    dateProdus(produse[idProdus-1]);
+// alegerea cantitatii
+const formQ = document.getElementById('formQuantity');
+const inputQ = formQ.elements['formQuantity__quantity'];
+const regex = /[^0-9]/g;
+const butonMinus = formQ.elements['decrease'];
+const butonPlus = formQ.elements['increase'];
+
+formQ.addEventListener('input', () => {
+    if (!inputQ.value) {
+        inputQ.value = 1;
+    } else {
+        inputQ.value = inputQ.value.replace(regex, '');
+    }
 })
+
+function chooseQuantity() {
+    inputQ.value = 1
+
+    function descrescator() {
+        butonMinus.addEventListener('click', () => {
+            if (inputQ.value <= 1) {
+                inputQ.value = 1;
+            } else {
+                inputQ.value--;
+            }
+        })
+    }
+
+    function crescator() {
+        butonPlus.addEventListener('click', () => {
+            inputQ.value++
+        })
+    }
+
+    return {
+        crescator,
+        descrescator
+    };
+}
+
+const cantitate = chooseQuantity();
+cantitate.descrescator();
+cantitate.crescator();
+
+function cartProdus(produs) {
+    const {id, categorie, titlu, descriere, pret, producator, codprodus, imagine, disponibilitate} = produs;
+
+    formQ.addEventListener('submit', (eventSubmit) => {
+        const cart = {
+            titlu: titlu,
+            pret: pret,
+            cantitate: Number(inputQ.value)
+        }
+
+        sessionStorage.setItem('cart'.concat(id), JSON.stringify(cart));
+    });
+    
+}

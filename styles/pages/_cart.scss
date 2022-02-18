@@ -1,0 +1,47 @@
+#sectionList {
+    margin: 0px auto 50px;
+
+    #headList {
+        text-align: center;
+        background-color: $color-primary;
+        min-width: 390px;
+
+        tr, td {
+            border: 1px solid $color-third;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+    }
+
+    #productList {
+        background-color: $color-white;
+
+        tr, td {
+            border: 1px solid $color-third;
+            padding: 10px 20px;
+        }
+
+        .produsInCos {
+            text-align: left;
+        }
+
+        .cantitateInCos {
+            text-align: center;
+        }
+
+        .pretInCos, .totalProdusInCos {
+            text-align: right;
+        }
+    }
+}
+
+#valoareFinala {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $color-primary;
+    border: 1px solid $color-third;
+    font-weight: bold;
+}

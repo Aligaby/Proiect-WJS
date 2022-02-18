@@ -9,10 +9,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
     <title></title>
     <meta name="description" content="">
-    <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="module" src="./scripts/global.js" defer></script>
-    <script type="module" src="./scripts/produs.js" defer></script>
+    <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
+    <script type="text/javascript" src="./scripts/cart.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -100,6 +100,8 @@
                 </button>
             </form>
         </section>
+
+        <!-- START main -->
         <main id="productMain">
             <!-- START breadcrumbs -->
             <div id="breadcrumbs">
@@ -110,53 +112,33 @@
                         </a>
                     </li>
                     <li>></li>
-                    <li id="breadcrumbs__ul-category">
-                        <a href=""></a>
-                    </li>
-                    <li>></li>
-                    <li id="breadcrumbs__ul-product"></li>
+                    <li id="breadcrumbs__ul-category">Cart</li>
                 </ul>
             </div>
             <!-- END breadcrumbs -->
-            <section id="productTop">
-                <!-- START img produs -->
-                <div id="productTop__image">
-                    <section id="productImage">
-                        <img src="" alt="Pompa de vid" id="productImage__img">
-                        <ul id="productCarusel"></ul>
-                    </section>
+            <section id="sectionList">
+                <table>
+                    <thead id="headList">
+                        <tr>
+                            <td>Denumire produs</td>
+                            <td>Cantitate</td>
+                            <td>Pret</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody id="productList">
+
+                    </tbody>
+                </table>
+                <div id="valoareFinala">
+                    <div>Valoare achizitie</div>
+                    <div id="valueOfCart"></div>
                 </div>
-                <!-- END img produs -->
-                <!-- START calltoaction -->
-                <aside id="productTop__buyInfo">
-                    <h1 id="productTop__buyInfo-h1"></h1>
-                    <p id="productTop__buyInfo-manufacturer"></p>
-                    <p id="productTop__buyInfo-productCode"></p>
-                    <p id="productTop__buyInfo-price"></p>
-                    <p id="productTop__buyInfo-availability">
-                        <span class="inStoc-verde"></span>
-                    </p>
-                    <form action="cart.html" method="get" id="formQuantity">
-                        <!-- <label for="formQuantity__quantity"></label> -->
-                        <button id="decrease" type="button">
-                            <span class="material-icons">remove</span>
-                        </button>
-                        <input type="text" name="productQuantity" id="formQuantity__quantity">
-                        <button id="increase" type="button">
-                            <span class="material-icons">add</span>
-                        </button>
-                        <input type="submit" value="Add to cart" id="formQuantity__submit">
-                    </form>
-                </aside>
-                <!-- END calltoaction -->
             </section>
-            <!-- START descriere produs -->
-            <article id="productContent">
-                <h2 id="productContent__h2">Detalii produs</h2>
-                <p class="productContent__description"></p>
-            </article>
-            <!-- END descriere produs -->
         </main>
+        <!-- END main -->
+
+        <!-- START footer -->
         <footer id="footer">
             <section id="footerApp">
                 <h3 id="footerApp__h3">Try our mobile app</h3>
