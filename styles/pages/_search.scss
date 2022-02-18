@@ -11,6 +11,10 @@
     padding: 10px;
     color: $color-primary;
     background-color: $color-secondary;
+
+    @media only screen and (min-width: 500px) {
+        margin: 0 50px;
+    }
 }
 
 #valueSearch {

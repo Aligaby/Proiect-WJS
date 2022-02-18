@@ -11,7 +11,8 @@
     <meta name="description" content="">
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
-    <script type="text/javascript" src="./scripts/search.js" defer></script>
+    <script type="module" src="./scripts/global.js" defer></script>
+    <script type="module" src="./scripts/search.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -106,8 +107,23 @@
 
         <!-- START Main-->
         <main id="searchMain">
-            <h3 id="mesajSearch"></h3>
+            <!-- START breadcrumbs -->
+            <div id="breadcrumbs">
+                <ul id="breadcrumbs__ul">
+                    <li id="breadcrumbs__ul-home">
+                        <a href="./index.html">
+                            <span class="material-icons">home</span>
+                        </a>
+                    </li>
+                    <li>></li>
+                    <li id="breadcrumbs__ul-product">Cauta</li>
+                </ul>
+            </div>
+            <!-- END breadcrumbs -->
+            <!-- START products -->
+            <p id="mesajSearch"></p>
             <section id="valueSearch"></section>
+            <!-- END products -->
         </main>
         <!-- END Main-->
 

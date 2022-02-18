@@ -1,4 +1,5 @@
-const endpointUrl = 'data/content.json';
+import { endpointUrl } from './global.js';
+// const endpointUrl = './data/content.json';
 const productMain = document.getElementById('productMain');
 const idProdus = Number(location.href.split('id=')[1]);
 
@@ -11,7 +12,9 @@ function dateProdus(produs) {
     // breadcrumbs
     const categorieBreadcrumb = document.getElementById('breadcrumbs__ul-category').firstElementChild;
     categorieBreadcrumb.href = `./categorie.html?id=${categorie}`;
-    categorieBreadcrumb.textContent = `${categorie}`;
+    const withoutLine = categorie.split('-').join(' ');
+    categorieBreadcrumb.textContent = `${withoutLine}`;
+    // categorieBreadcrumb.textContent = `${categorie}`;
     const produsBreadcrumb = document.getElementById('breadcrumbs__ul-product');
     produsBreadcrumb.textContent = `${titlu}`;
 

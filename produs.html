@@ -10,9 +10,9 @@
     <title></title>
     <meta name="description" content="">
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
-    <script type="text/javascript" src="./scripts/produs.js" defer></script>
+    <script type="module" src="./scripts/global.js" defer></script>
+    <script type="module" src="./scripts/produs.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
-    <script type="text/javascript" src="./scripts/search.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -94,7 +94,7 @@
         </header>
         <section id="hero" class="searcBarOnOtherPages">
             <form action="./search.html" method="get" id="hero__form">
-                <input type="search" id="hero__form-searchBar" placeholder="Search ...">
+                <input type="search" name="query" id="hero__form-searchBar" placeholder="Search ...">
                 <button type="submit" id="hero__form-submitSearch">
                     <span class="material-icons">search</span>
                 </button>

@@ -1,4 +1,5 @@
-const endpointUrl = 'data/content.json';
+import { endpointUrl } from './global.js';
+// const endpointUrl = './data/content.json';
 const idCategorie = location.href.split('id=')[1];
 
 function createCards(product) {
@@ -14,18 +15,14 @@ function createCards(product) {
     const pret = document.createElement('p');
     pret.classList.add('card__price');
     pret.textContent = `${product.pret} lei`;
-    const buton = document.createElement('button');
-    buton.classList.add('card__button');
-    buton.type = 'submit';
-    buton.textContent = 'COMANDA';
-    const a = document.createElement('a');
-    a.href = `./produs.html?id=${product.id}`;
-    a.textContent = `${product.id}`;
+    const seeProduct = document.createElement('a');
+    seeProduct.classList.add('card__a');
+    seeProduct.href = `./produs.html?id=${product.id}`;
+    seeProduct.textContent = `SEE PRODUCT`;
     card.appendChild(img);
     card.appendChild(titlu);
     card.appendChild(pret);
-    card.appendChild(buton);
-    card.appendChild(a);
+    card.appendChild(seeProduct);
 
     return card;    
 }
@@ -33,7 +30,9 @@ function createCards(product) {
 function dateProdus(produse) {
     // breadcrumbs
     const categorieBreadcrumb = document.getElementById('breadcrumbs__ul-category');
-    categorieBreadcrumb.textContent = `${produse[0].categorie}`;
+    const withoutLine = produse[0].categorie.split('-').join(' ');
+    categorieBreadcrumb.textContent = `${withoutLine}`;
+    // categorieBreadcrumb.textContent = `${produse[0].categorie}`;
 
     // creez fiecare produs
     const productsCategory = document.getElementById('productsCategory');  
@@ -44,10 +43,10 @@ function dateProdus(produse) {
 
 fetch(endpointUrl).then((data) => data.json()).then(date => {
     const produse = date.produse;
-    produseDinCategorie = [];
+    const produseDinCategorie = [];
     produse.filter(item => {
         if (item.categorie === idCategorie) {
-            produseDinCategorie.push(item)
+            produseDinCategorie.push(item);
         }
     })
     dateProdus(produseDinCategorie);

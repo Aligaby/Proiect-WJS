@@ -1,9 +1,7 @@
 // cale fisier JSON
-const endpointUrl = 'data/content.json';
-// conectarea la formularul de cautare
-const formSearch = document.getElementById('hero__form');
-const inputSearch = formSearch.elements['hero__form-searchBar'];
-const submitSearch = formSearch.elements['hero__form-submitSearch'];
+import { endpointUrl } from './global.js';
+import { formSearch } from './global.js';
+import { inputSearch } from './global.js';
 
 const productsCategory = document.getElementById('valueSearch'); 
 const mesajSearch = document.getElementById('mesajSearch');
@@ -11,10 +9,19 @@ const mesajSearch = document.getElementById('mesajSearch');
 // mesaj initial pe pagina de search pentru a informa vizitatorul de dimensiunea minima a wordului cautat
 mesajSearch.textContent = `Foloseste pentru cuvantul cautat minim 3 caractere`;
 
+// daca cautarea vina din alta pagina (index, produs, categorie)
+const url = new URL(window.location);
+const query = url.searchParams.get('query');
+if(query) {
+    inputSearch.value = query;
+    fetchDataFromJson();
+}
+
+// daca cautarea vina din pagina de search apasand butonul search
 formSearch.addEventListener('submit', (eventSubmit) => {
     eventSubmit.preventDefault();
     
-    productsCategory.innerHTML = ''; // curat pagina de rezultatele de la cautarea anterioara
+    productsCategory.innerHTML = ''; // curat pagina de rezultatele de la cautarea anterioare
     if (inputSearch.value.length > 2) {
         fetchDataFromJson();
     } else {
@@ -30,7 +37,8 @@ function fetchDataFromJson() {
 }
 
 function dateProdus(produse) {
-    const wordToFound = inputSearch.value.trim().toLowerCase();
+    const cleanWord = inputSearch.value.replace(/\\/g, '');
+    const wordToFound = cleanWord.trim().toLowerCase();
     let countProduseGasite = 0;
     // creez fiecare produs
     produse.forEach(elem => {
@@ -61,18 +69,14 @@ function createCards(product) {
     const pret = document.createElement('p');
     pret.classList.add('card__price');
     pret.textContent = `${product.pret} lei`;
-    const buton = document.createElement('button');
-    buton.classList.add('card__button');
-    buton.type = 'submit';
-    buton.textContent = 'COMANDA';
-    const a = document.createElement('a');
-    a.href = `./produs.html?id=${product.id}`;
-    a.textContent = `${product.id}`;
+    const seeProduct = document.createElement('a');
+    seeProduct.classList.add('card__a');
+    seeProduct.href = `./produs.html?id=${product.id}`;
+    seeProduct.textContent = `SEE PRODUCT`;
     card.appendChild(img);
     card.appendChild(titlu);
     card.appendChild(pret);
-    card.appendChild(buton);
-    card.appendChild(a);
+    card.appendChild(seeProduct);
 
     return card; 
 }

@@ -1,7 +1,11 @@
 #breadcrumbs {
     margin: 10px 0px;
-    padding: 0 50px;
+    padding: 0;
     font-size: 12px;
+
+    @media only screen and (min-width: 500px) {
+        padding: 0 50px;
+    }
 
     &__ul {
         list-style: none;
