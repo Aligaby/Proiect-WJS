@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
     <title>Document</title>
     <script type="text/javascript" src="./scripts/sign-up.js" defer></script>
+    <script type="text/javascript" src="./scripts/showPassword.js" defer></script>
 </head>
 <body>
     <main id="mainSign">
         <div id="containerSign">
             <section id="left">
                 <h2>HVACR tools</h2>
-                <p>High performance tools for wide application in refrigeration</p>
+                <p>Unelte de inalta performanta pentru o larga utilizare in frigotehnie</p>
                 <button id="left__button">
-                    <a href="./index.html" id="left__button--forSellers">FOR SELLERS</a>
+                    <a href="./index.html" id="left__button--forSellers">VEZI PRODUSE</a>
                 </button>
             </section>
             <section id="right">
-                <img src="./image/sign-up.webp" alt="sign up" id="img-signInUp" />
+                <img src="./image/logo.webp" alt="sign up" id="img-signInUp" />
                 <h1 id="h1-signInUp">Sign Up Below!</h1>
                 <form id="signup-form" action="./sign-in.html" method="get">
                     <fieldset>
@@ -43,6 +44,7 @@
                         <div class="fields">
                             <label for="password" class="fields__label">Password</label>
                             <input type="password" name="password" id="password" class="fields__input" >
+                            <span class="material-icons" id="showPassword">visibility</span>
                             <p class="underInput"></p>
                         </div>
                         <div class="fields">

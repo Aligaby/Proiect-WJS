@@ -73,7 +73,7 @@
 img#img-signInUp {
     margin-bottom: $bottom-space;
     width: 100px;
-    height: 100px;
+    // height: 100px;
     object-fit: cover;
 }
 
@@ -164,4 +164,11 @@ input[type="submit"]#submitInUp {
     a {
         color: $color-calltoaction;
     }
+}
+
+#showPassword {
+    margin-top: -30px;
+    margin-left: 250px;
+    cursor: pointer;
+    color: $color-medium-gray;
 }

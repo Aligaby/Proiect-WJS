@@ -1,6 +1,10 @@
 #sectionList {
     margin: 0px auto 50px;
 
+    table {
+        border-collapse: collapse;
+    }
+
     #headList {
         text-align: center;
         background-color: $color-primary;
@@ -16,10 +20,15 @@
     #productList {
         background-color: $color-white;
 
-        tr, td {
-            border: 1px solid $color-third;
+        tr {
             padding: 10px 20px;
+            border: 1px solid $color-third;
+            
+            td {
+                padding: 10px 20px;
+            }
         }
+
 
         .produsInCos {
             text-align: left;

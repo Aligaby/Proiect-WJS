@@ -589,6 +589,63 @@ body {
   font-weight: lighter;
 }
 
+#beneficii {
+  display: none;
+}
+
+@media only screen and (min-width: 380px) {
+  #beneficii {
+    margin: 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 10px;
+    background-color: #FFFFFF;
+  }
+}
+
+#beneficii .beneficiu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #B9AE80;
+  border: 1px solid #263144;
+  padding: 20px;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#beneficii .beneficiu span {
+  color: #263144;
+}
+
 body {
   text-align: center;
 }
@@ -735,7 +792,6 @@ body {
 img#img-signInUp {
   margin-bottom: 15px;
   width: 100px;
-  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -841,6 +897,13 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
 
 #signIn a {
   color: #70BB66;
+}
+
+#showPassword {
+  margin-top: -30px;
+  margin-left: 250px;
+  cursor: pointer;
+  color: #777777;
 }
 
 #left-signin, #right-signin {
@@ -1177,6 +1240,10 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
   margin: 0px auto 50px;
 }
 
+#sectionList table {
+  border-collapse: collapse;
+}
+
 #sectionList #headList {
   text-align: center;
   background-color: #DFE9F2;
@@ -1193,8 +1260,12 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
   background-color: #FFFFFF;
 }
 
-#sectionList #productList tr, #sectionList #productList td {
+#sectionList #productList tr {
+  padding: 10px 20px;
   border: 1px solid #B9AE80;
+}
+
+#sectionList #productList tr td {
   padding: 10px 20px;
 }
 
