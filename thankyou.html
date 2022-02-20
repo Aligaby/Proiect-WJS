@@ -9,11 +9,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
     <title></title>
     <meta name="description" content="">
+    <script type="module" src="./scripts/global.js" defer></script>
+    <script type="module" src="./scripts/cart.js" defer></script>
+    <script type="module" src="./scripts/numberOfItems.js" defer></script>
+    <script type="module" src="./scripts/thankyou.js" defer></script>
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
-    <script type="module" src="./scripts/global.js" defer></script>
-    <script type="module" src="./scripts/categorie.js" defer></script>
-    <script type="module" src="./scripts/numberOfItems.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -25,7 +26,6 @@
                         <img src="./image/logo.webp" alt="Tools" id="logo__img">
                     </a>
                 </h1>
-                <span id="lungime" style="color: #FFF;"></span>
                 <div id="nav-right">
                     <a href="./cart.html" id="yourCart">
                         <span id="numberOfItems"></span>
@@ -104,30 +104,15 @@
             </form>
         </section>
 
-
-        <!-- START Main-->
-        <main id="categoryMain">
-            <div id="breadcrumbs">
-                <ul id="breadcrumbs__ul">
-                    <li id="breadcrumbs__ul-home">
-                        <a href="./index.html">
-                            <span class="material-icons">home</span>
-                        </a>
-                    </li>
-                    <li>></li>
-                    <li id="breadcrumbs__ul-category"></li>
-                </ul>
-            </div>
-            <div id="categoryArea">
-                <!-- START PRODUSE -->
-                <section id="productsCategory"></section>
-                <!-- END PRODUSE -->
-            </div>
+        <!-- START main -->
+        <main id="thankyouMain">
+            <section>
+                <h1>Multumim pentru comanda</h1>
+            </section>
         </main>
-        <!-- END Main-->
+        <!-- END main -->
 
-
-
+        <!-- START footer -->
         <footer id="footer">
             <section id="footerApp">
                 <h3 id="footerApp__h3">Try our mobile app</h3>

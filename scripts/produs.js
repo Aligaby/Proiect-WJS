@@ -99,6 +99,7 @@ function cartProdus(produs) {
 
     formQ.addEventListener('submit', (eventSubmit) => {
         const cart = {
+            id: id,
             titlu: titlu,
             pret: pret,
             cantitate: Number(inputQ.value)

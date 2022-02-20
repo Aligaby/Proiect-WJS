@@ -646,6 +646,19 @@ body {
   color: #263144;
 }
 
+#numberOfItems {
+  display: none;
+  max-width: 20px;
+  max-height: 20px;
+  margin-left: -20px;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: red;
+  color: #ffFf00;
+  border-radius: 70%;
+}
+
 body {
   text-align: center;
 }
@@ -1236,23 +1249,106 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
   padding: 10px 50px 0;
 }
 
+#clientAndItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 0px;
+  -webkit-box-flex: 1fr;
+      -ms-flex: 1fr;
+          flex: 1fr;
+}
+
+@media screen and (min-width: 1320px) {
+  #clientAndItems {
+    gap: 50px;
+  }
+}
+
+#clientAndItems #fieldLeft, #clientAndItems #fieldRight {
+  border: 1px solid #263144;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+#clientAndItems #fieldLeft legend, #clientAndItems #fieldRight legend {
+  position: relative;
+  border: 1px solid #263144;
+  padding: 10px;
+  background-color: #B9AE80;
+  font-weight: bold;
+  color: #000000;
+  margin-left: 20px;
+}
+
+#cartDateClient {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 680px) {
+  #cartDateClient {
+    -ms-grid-columns: (minmax(300px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+#submitOrder {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 120px;
+  background-color: #70BB66;
+  color: #FFF;
+  border: 0px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
 #sectionList {
-  margin: 0px auto 50px;
+  margin: 0px auto;
 }
 
 #sectionList table {
   border-collapse: collapse;
+  min-width: 380px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 680px) {
+  #sectionList table {
+    font-size: 16px;
+  }
 }
 
 #sectionList #headList {
   text-align: center;
   background-color: #DFE9F2;
-  min-width: 390px;
 }
 
 #sectionList #headList tr, #sectionList #headList td {
   border: 1px solid #B9AE80;
-  padding: 10px 20px;
+  padding: 10px;
   font-weight: bold;
 }
 
@@ -1261,12 +1357,12 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
 }
 
 #sectionList #productList tr {
-  padding: 10px 20px;
+  padding: 10px;
   border: 1px solid #B9AE80;
 }
 
 #sectionList #productList tr td {
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 #sectionList #productList .produsInCos {
@@ -1279,6 +1375,11 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
 
 #sectionList #productList .pretInCos, #sectionList #productList .totalProdusInCos {
   text-align: right;
+}
+
+#sectionList #productList .removeItem {
+  text-align: center;
+  cursor: pointer;
 }
 
 #valoareFinala {
@@ -1295,7 +1396,7 @@ input[type="submit"]#submitInUp:disabled, input[type="submit"]#submitInUp[disabl
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  padding: 10px 80px 10px 10px;
   background-color: #DFE9F2;
   border: 1px solid #B9AE80;
   font-weight: bold;
