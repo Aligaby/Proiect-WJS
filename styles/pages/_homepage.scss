@@ -20,6 +20,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 592px;
+    background-color: $color-white;
 
     &__div {
         max-width: 650px;
@@ -44,4 +45,9 @@ body {
             font-weight: lighter;
         }
     }
+}
+
+#homepageMain {
+    background-color: $color-white;
+    padding: 5px 0px 30px;
 }

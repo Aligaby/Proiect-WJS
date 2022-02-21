@@ -25,10 +25,11 @@
         }
 
         &-submitSearch {
-            padding: 6px 30px;
+            display: flex;
+            padding: 9px 30px;
             font-size: 16px;
             color: $color-white;
-            border: 1px solid $color-calltoaction;
+            border: 0;
             border-radius: 0 7px 7px 0;
             background-color: $color-calltoaction;
             vertical-align: middle;
