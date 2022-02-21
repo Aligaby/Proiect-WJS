@@ -1,0 +1,21 @@
+#thankyouMain {
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+#mesajDeMultumire {
+    background-color: $color-white;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    span {
+        font-weight: bold;
+    }
+}

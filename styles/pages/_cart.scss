@@ -51,6 +51,13 @@
     border: 0px;
     margin-bottom: $bottom-space;
     cursor: pointer;
+
+    &:disabled,
+    &[disabled] {
+        background-color: green;
+        opacity: 0.3;
+        cursor: auto;
+    }
 }
 
 #sectionList {
@@ -118,3 +125,4 @@
     border: 1px solid $color-third;
     font-weight: bold;
 }
+

@@ -85,6 +85,11 @@
                 content: "login";
                 @include linkBeforeSign;
             }
+
+            &#logout::before {
+                content: "logout";
+                @include linkBeforeSign;
+            }
         }  
     }
 }

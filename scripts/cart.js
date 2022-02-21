@@ -3,16 +3,17 @@ export let listaDeProduse = allStorage();
 const cartFromUrl = window.location.pathname.split('/')
 const numberCartFromUrl = cartFromUrl.length-1;
 
+const inputValoareFinala = document.getElementById('valoareFinala');
 
-if (!JSON.parse(sessionStorage.getItem('userLogat'))) {
-    listaDeProduse = 0;
-    const section = document.getElementById('sectionList');
-    const h1 = document.createElement('h1');
-    h1.textContent = `Conecteaza-te pentru a vedea cosul!`;
-    section.appendChild(h1);
-} else {
-    let valTotalCart = 0;
-    if (cartFromUrl[numberCartFromUrl] === 'cart.html') {
+if (cartFromUrl[numberCartFromUrl] === 'cart.html') {
+    if (!JSON.parse(sessionStorage.getItem('userLogat'))) {
+        listaDeProduse = 0;
+        const section = document.getElementById('sectionList');
+        const h1 = document.createElement('h1');
+        h1.textContent = `Conecteaza-te pentru a vedea cosul!`;
+        section.appendChild(h1);
+    } else {
+        let valTotalCart = 0;
         createTable();
         dateUserCompletate();
         listaDeProduse.forEach(item => {
@@ -21,6 +22,7 @@ if (!JSON.parse(sessionStorage.getItem('userLogat'))) {
             valTotalCart += (item.cantitate * item.pret);
         })
         document.getElementById('valueOfCart').textContent = `${valTotalCart} lei`;
+        inputValoareFinala.value = valTotalCart;
     }
 }
 

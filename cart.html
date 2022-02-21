@@ -14,6 +14,8 @@
     <script type="module" src="./scripts/numberOfItems.js" defer></script>
     <script type="text/javascript" src="./scripts/responsive-menu.js" defer></script>
     <script type="text/javascript" src="./scripts/connect-user.js" defer></script>
+    <script type="text/javascript" src="./scripts/sendorder.js" defer></script>
+    <script type="text/javascript" src="./scripts/logout.js" defer></script>
 </head>
 <body>
     <div id="pageContent">
@@ -35,6 +37,9 @@
                     </a>
                     <a href="./sign-in.html" id="login">
                         <span class="respoVizibile">Login</span>
+                    </a>
+                    <a href="./index.html" id="logout" class="close">
+                        <span class="respoVizibile">Logout</span>
                     </a>
                 </div>
             </div>
@@ -147,8 +152,9 @@
                                 <label for="country" class="fields__label">Country</label>
                                 <input type="text" name="country" id="country" class="fields__input" placeholder="Select City First">
                             </div>
+                            <input type="hidden" name="valoareFinala" id="valoareFinala" class="fields__input">
                         </section>
-                        <input type="submit" id="submitOrder" value="Send Order">
+                        <input type="submit" id="submitOrder" value="Send Order" disabled>
                     </fieldset>
                     <fieldset  id="fieldRight">
                         <legend>Produse</legend>
